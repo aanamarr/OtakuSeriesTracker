@@ -1,20 +1,12 @@
-@use "../core/variables" as *;
 
-.page__footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100vw;
-  padding: 1rem;
-  color: $color-secondary;
-}
+@use '../core/variables' as *;
+
 
 footer {
   background-color: $color-secondary;
-  text-align: center;
   padding: 15px;
   font-size: 1.2rem;
   color: $color-text;
-  font-family: "comic sans ms", cursive, sans-serif;
+  font-weight: bold;
   border-top: 5px solid $color-border;
 }

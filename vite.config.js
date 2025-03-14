@@ -7,7 +7,7 @@ import FastGlob from 'fast-glob';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-// Obtener todos los archivos HTML
+
 const htmlFilesList = Object.fromEntries(
   FastGlob.sync('src/**/*.html').map(file => [
     path.relative(
@@ -24,9 +24,10 @@ const inputFilesList = {
 };
 
 export default defineConfig({
-  base: "/OtakuSeriesTracker/", //  Configuración para GitHub Pages
+  base: "/OtakuSeriesTracker/",
   root: "src",
-  publicDir: "../public",
+  publicDir: "public",
+
   build: {
     minify: "esbuild",
     outDir: "../docs",
