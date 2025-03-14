@@ -1,5 +1,18 @@
+@use '../core/variables' as *; // Asegúrate de que la ruta sea correcta
+
+
 .page__header {
   display: flex;
   justify-content: space-evenly;
   margin-bottom: 3rem;
+}
+
+.titleanime {
+  background-color: $color-primary;
+  text-align: center;
+  padding: 20px;
+  font-size: 2rem;
+  color: white;
+  font-family: "comic sans ms", cursive, sans-serif;
+  border-bottom: 5px solid $color-border;  
 }

@@ -5,7 +5,7 @@
 	"type": "module",
 	"devDependencies": {
 		"@vituum/vite-plugin-concat": "^1.0.0",
-		"sass": "^1.83.4",
+		"sass": "^1.85.1",
 		"sharp": "^0.32.6",
 		"vite": "^4.4.5",
 		"vite-plugin-html-inject": "^1.0.4",
@@ -26,6 +26,5 @@
 	},
 	"author": "Adalab",
 	"license": "MIT",
-"homepage": "https://aanamarr.github.io/OtakuSeriesTracker/"
-
+	"homepage": "https://aanamarr.github.io/OtakuSeriesTracker/"
 }

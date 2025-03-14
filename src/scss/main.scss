@@ -1,10 +1,10 @@
-@import 'core/variables';
-@import 'core/reset';
-//falta @import del leyout de la pagina principal';
-@import 'layout/header';
-@import 'layout/main';
-@import 'layout/footer';
+@use "core/variables" as *;
+@use 'core/reset';
+@use 'layout/header';
+@use 'layout/main';
+@use 'layout/footer';
 
+/* 
 body {
     font-family: Arial, sans-serif;
     background-color: #f591c0;
@@ -26,7 +26,7 @@ body {
     margin: 0 auto;
 }
   
-/* Formulario */
+
 .form {
     display: flex;
     justify-content: space-between;
@@ -69,7 +69,7 @@ body {
     background-color: #8c659a;
 }
   
-/* Secciones */
+
 .container {
     display: flex;
     justify-content: center;
@@ -123,4 +123,4 @@ body {
 .btn-eliminar-fav:hover {
     background-color: #c30c1e;
 }
-  
+*/
