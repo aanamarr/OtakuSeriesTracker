@@ -4,10 +4,11 @@
 	"description": "Adalab web starter kit",
 	"type": "module",
 	"devDependencies": {
+		"@vitejs/plugin-react": "^4.3.4",
 		"@vituum/vite-plugin-concat": "^1.0.0",
 		"sass": "^1.85.1",
 		"sharp": "^0.32.6",
-		"vite": "^4.4.5",
+		"vite": "^6.2.2",
 		"vite-plugin-html-inject": "^1.0.4",
 		"vite-plugin-image-optimizer": "^1.1.7"
 	},
@@ -26,5 +27,9 @@
 	},
 	"author": "Adalab",
 	"license": "MIT",
-	"homepage": "https://aanamarr.github.io/OtakuSeriesTracker/"
+	"homepage": "https://aanamarr.github.io/OtakuSeriesTracker/",
+	"dependencies": {
+		"react": "^19.0.0",
+		"react-dom": "^19.0.0"
+	}
 }

@@ -1,8 +1,7 @@
-@use "core/variables" as *;
-@use 'core/reset';
-@use 'layout/header';
-@use 'layout/main';
-@use 'layout/footer';
+@use './core/variables';
+@use './core/reset';
+@use './layout/header';
+@use './layout/footer';
 
 /* 
 body {

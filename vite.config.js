@@ -1,37 +1,30 @@
-// vite.config.js
 import { defineConfig } from "vite";
-// html partals
+import react from '@vitejs/plugin-react';
 import injectHTML from "vite-plugin-html-inject";
-// optimize images
 import { ViteImageOptimizer } from 'vite-plugin-image-optimizer';
-// Concatenate JavaScript files (like former Starter Kit)
-import concat from '@vituum/vite-plugin-concat'
-// Calculate paths
-import FastGlob from 'fast-glob'
+import concat from '@vituum/vite-plugin-concat';
+import FastGlob from 'fast-glob';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-// Get all html files
+// Obtener todos los archivos HTML
 const htmlFilesList = Object.fromEntries(
-  FastGlob.sync('src/*.html').map(file => [
-    // This remove `src/` as well as the file extension from each
-    // file, so e.g. src/nested/foo.js becomes nested/foo
+  FastGlob.sync('src/**/*.html').map(file => [
     path.relative(
       'src',
       file.slice(0, file.length - path.extname(file).length)
     ),
-    // This expands the relative paths to absolute paths, so e.g.
-    // src/nested/foo becomes /project/src/nested/foo.js
     fileURLToPath(new URL(file, import.meta.url))
-  ]));
+  ])
+);
 
 const inputFilesList = {
   ...htmlFilesList,
   'main': 'src/js/main.js',
-}
+};
 
 export default defineConfig({
-  base: "./",
+  base: "/OtakuSeriesTracker/", //  Configuración para GitHub Pages
   root: "src",
   publicDir: "../public",
   build: {
@@ -43,12 +36,10 @@ export default defineConfig({
       input: inputFilesList,
       output: {
         sourcemap: true,
-        entryFileNames: ({name}) => {
-          if( name === 'main' ) {
+        entryFileNames: ({ name }) => {
+          if (name === 'main') {
             return 'js/main.js';
           }
-          // default value
-          // ref: https://rollupjs.org/configuration-options/#output-entryfilenames
           return "[name].js";
         },
       },
@@ -56,14 +47,10 @@ export default defineConfig({
   },
   server: {
     open: "/index.html",
+    watch: {
+      usePolling: true,
+    },
+    hmr: true,
   },
-  plugins: [
-    injectHTML(),
-    ViteImageOptimizer({
-      /* pass your config */
-    }),
-    concat({
-      input: ['main.js']
-    }),
-  ],
+  plugins: [react()],
 });

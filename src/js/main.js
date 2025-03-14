@@ -19,7 +19,18 @@ let animeList = [];
 let favAnime = [];
 
 
+//Corrección de main.js (Asegurar que el DOM está cargado antes de acceder a elementos):
 
+document.addEventListener("DOMContentLoaded", function () {
+
+    if (input && btnSearch) {
+        searchButton.addEventListener("click", function () {
+            console.log("Búsqueda iniciada con: ", searchInput.value);
+        });
+    } else {
+        console.error("Elementos no encontrados en el DOM");
+    }
+});
 
 //INICIO evento eliminar fav
 const handleClickEliminateAllFav = () => {
