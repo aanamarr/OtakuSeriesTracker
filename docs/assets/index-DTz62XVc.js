@@ -6,4 +6,4 @@
                 <p>${o.title}</p>
                 <button class="remove-fav" data-id="${o.mal_id}">X</button>
             </div>`).join(""),document.querySelectorAll(".remove-fav").forEach(o=>{o.addEventListener("click",u=>{const r=parseInt(u.target.dataset.id);n=n.filter(s=>s.mal_id!==r),f()})}),localStorage.setItem("favAnimeServer",JSON.stringify(n))}const p=localStorage.getItem("favAnimeServer");p&&(n=JSON.parse(p),f())});
-//# sourceMappingURL=index-COwwX94Z.js.map
+//# sourceMappingURL=index-DTz62XVc.js.map
