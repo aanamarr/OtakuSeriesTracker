@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Buscador de Series de Anime</title>
+
+    <!-- Fuente Roboto -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet" />
+    
+    <!-- CSS -->
+
+
+    <link rel="stylesheet" crossorigin href="/OtakuSeriesTracker/assets/index-w4FcsVgD.css">
+  </head>
+
+  <body>
+    <div>
+
+      <!-- Header -->
+      <header class="titleanime">
+        <h1>Buscador de Series de Anime</h1>
+      </header>
+
+      <!-- Contenido principal -->
+      <main class="main">
+        <!-- Formulario de búsqueda -->
+        <input class="input js-search" type="text" placeholder="Título de la Serie" required />
+        <button class="btn js-btn-search" type="submit">Buscar</button>
+        <button class="btn-reset js-btn-reset" type="button">Reset</button>
+      
+        <section class="section-result">
+          <h2 class="result-title">Resultados</h2>
+          <div class="js-container-result"></div> 
+        </section>
+      
+
+        <section class="section-fav js-container-fav">
+          <button class="btn-eliminar-fav js-eliminar-fav">Borrar todos los favoritos</button>
+          <h2 class="fav">Series Favoritas</h2>
+          <div class="js-container-selected-fav"></div>
+        </section>
+      </main> <!-- Fin del contenido principal -->
+
+      <!-- Footer -->
+      <footer></footer>
+
+    </div> <!-- Fin del contenedor principal -->
+
+    <!-- JavaScript -->
+    <script src="./js/main.js" defer></script>
+
+
+  </body>
+</html>
+
